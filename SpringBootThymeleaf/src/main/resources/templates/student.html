@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student data</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stud Id</th>
+                    <th>Stud Name</th>
+                    <th>Stud Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="dt : ${mydata}">
+                    <td th:text="${dt.studId}"></td>
+                    <td th:text="${dt.studName}"></td>
+                    <td th:text="${dt.marks}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
